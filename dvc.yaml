@@ -1,0 +1,20 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+      - data/DataBase_table.csv
+      - src/prepare.py
+    outs:
+      - data/interim/DataBase_PCA10_labels.csv
+
+  train:
+    cmd: python src/train.py --params params.yaml
+    deps:
+      - data/interim/DataBase_PCA10_labels.csv
+      - src/train.py
+      - params.yaml
+    outs:
+      - models/classifier.pkl
+    metrics:
+      - metrics/train.json:
+          cache: false
