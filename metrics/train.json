@@ -1,1 +1,93 @@
-"              precision    recall  f1-score   support\n\n          DP       1.00      0.80      0.89        70\n      fcomb1       0.82      0.77      0.80        43\n      fcomb2       0.88      0.85      0.86        52\n      fcomb3       1.00      0.81      0.89        42\n      fcomb4       0.33      0.83      0.47        54\n      fcomb5       0.76      0.82      0.79        50\n      fcomb6       1.00      0.78      0.88        55\n      fcomp1       1.00      0.82      0.90        55\n      fcomp2       1.00      0.81      0.90        64\n      fcomp3       1.00      0.87      0.93        60\n      fcomp4       1.00      0.84      0.91        49\n      fcomp5       1.00      0.89      0.94        53\n      fcomp6       1.00      0.91      0.95        53\n\n    accuracy                           0.83       700\n   macro avg       0.91      0.83      0.85       700\nweighted avg       0.91      0.83      0.86       700\n"
+{
+  "DP": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.8888888888888888,
+    "support": 70.0
+  },
+  "fcomb1": {
+    "precision": 0.825,
+    "recall": 0.7674418604651163,
+    "f1-score": 0.7951807228915663,
+    "support": 43.0
+  },
+  "fcomb2": {
+    "precision": 0.88,
+    "recall": 0.8461538461538461,
+    "f1-score": 0.8627450980392157,
+    "support": 52.0
+  },
+  "fcomb3": {
+    "precision": 1.0,
+    "recall": 0.8095238095238095,
+    "f1-score": 0.8947368421052632,
+    "support": 42.0
+  },
+  "fcomb4": {
+    "precision": 0.32608695652173914,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.46875,
+    "support": 54.0
+  },
+  "fcomb5": {
+    "precision": 0.7592592592592593,
+    "recall": 0.82,
+    "f1-score": 0.7884615384615384,
+    "support": 50.0
+  },
+  "fcomb6": {
+    "precision": 1.0,
+    "recall": 0.7818181818181819,
+    "f1-score": 0.8775510204081632,
+    "support": 55.0
+  },
+  "fcomp1": {
+    "precision": 1.0,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.9,
+    "support": 55.0
+  },
+  "fcomp2": {
+    "precision": 1.0,
+    "recall": 0.8125,
+    "f1-score": 0.896551724137931,
+    "support": 64.0
+  },
+  "fcomp3": {
+    "precision": 1.0,
+    "recall": 0.8666666666666667,
+    "f1-score": 0.9285714285714286,
+    "support": 60.0
+  },
+  "fcomp4": {
+    "precision": 1.0,
+    "recall": 0.8367346938775511,
+    "f1-score": 0.9111111111111111,
+    "support": 49.0
+  },
+  "fcomp5": {
+    "precision": 1.0,
+    "recall": 0.8867924528301887,
+    "f1-score": 0.94,
+    "support": 53.0
+  },
+  "fcomp6": {
+    "precision": 1.0,
+    "recall": 0.9056603773584906,
+    "f1-score": 0.9504950495049505,
+    "support": 53.0
+  },
+  "accuracy": 0.83,
+  "macro avg": {
+    "precision": 0.9069497089062306,
+    "recall": 0.8296005415545387,
+    "f1-score": 0.8540802633938505,
+    "support": 700.0
+  },
+  "weighted avg": {
+    "precision": 0.9111523694501955,
+    "recall": 0.83,
+    "f1-score": 0.8561312099226654,
+    "support": 700.0
+  }
+}
