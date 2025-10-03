@@ -3,40 +3,45 @@ stages:
   prepare:
     cmd: python src/prepare.py
     deps:
-    - path: data/DataBase_table.csv
+    - path: data/engine_fault_detection_dataset.csv
       hash: md5
-      md5: 360096aeebfbf753a90af3abc6f9262e
-      size: 5392719
+      md5: 8c066647a40b9d3fd1b9299770f9bbc9
+      size: 2070133
     - path: src/prepare.py
       hash: md5
-      md5: 6dcc2c6a02db77cdd2bfab2c25b44be1
-      size: 1323
+      md5: 1b4a727f0690658f63ab654df103c089
+      size: 1360
     outs:
-    - path: data/interim/DataBase_PCA10_labels.csv
+    - path: data/interim/engine_fault_detection_scaled_dataset.csv
       hash: md5
-      md5: 524b383a373f3332163793abf89a2144
-      size: 711798
+      md5: 788f3af0e4847c2e98b07d5bd8e0b037
+      size: 2180799
   train:
-    cmd: python src/train.py --params params.yaml
+    cmd: python src/train.py
     deps:
-    - path: data/interim/DataBase_PCA10_labels.csv
+    - path: data/interim/engine_fault_detection_scaled_dataset.csv
       hash: md5
-      md5: 524b383a373f3332163793abf89a2144
-      size: 711798
+      md5: 788f3af0e4847c2e98b07d5bd8e0b037
+      size: 2180799
     - path: params.yaml
       hash: md5
-      md5: 5705e50dd6d0290707f55d79c5fd7d8d
-      size: 71
+      md5: 9decaf0394c0daeb639f6eb7687eb8da
+      size: 471
     - path: src/train.py
       hash: md5
-      md5: d45ebb7ada62b64a4ce4a1cc5039b050
-      size: 2366
+      md5: f9666d4af1273617be162455db5842aa
+      size: 6130
     outs:
+    - path: metrics/summary.csv
+      hash: md5
+      md5: 2a7574feadbe1b5711bcd4c7bc8fbc6a
+      size: 105
     - path: metrics/train.json
       hash: md5
-      md5: de2b5911d5a521be1edb2c02dca84d50
-      size: 2054
-    - path: models/classifier.pkl
+      md5: 74a2c2383b9420cd4831cab56ae78a16
+      size: 6546
+    - path: models
       hash: md5
-      md5: f8933342880dbf816d3e097cd3050007
-      size: 232529
+      md5: 1e4ade6e1a15e192568b4fa84182b71a.dir
+      size: 3568903
+      nfiles: 6

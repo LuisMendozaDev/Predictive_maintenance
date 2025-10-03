@@ -2,19 +2,21 @@ stages:
   prepare:
     cmd: python src/prepare.py
     deps:
-      - data/DataBase_table.csv
+      - data/engine_fault_detection_dataset.csv
       - src/prepare.py
     outs:
-      - data/interim/DataBase_PCA10_labels.csv
+      - data/interim/engine_fault_detection_scaled_dataset.csv
 
   train:
-    cmd: python src/train.py --params params.yaml
+    cmd: python src/train.py
     deps:
-      - data/interim/DataBase_PCA10_labels.csv
+      - data/interim/engine_fault_detection_scaled_dataset.csv
       - src/train.py
       - params.yaml
     outs:
-      - models/classifier.pkl
+      - models
     metrics:
       - metrics/train.json:
+          cache: false
+      - metrics/summary.csv:
           cache: false
